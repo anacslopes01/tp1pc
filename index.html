@@ -1,0 +1,133 @@
+<!--Aluna: Ana Cristina Silva Lopes RA 1290482223009 1° ciclo ADS Noturno-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page 1</title>
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <style>
+    *{
+        /*A propriedade border-sizing faz com que a box (como se fosse o bloco do elemento) possa ser ajustada de forma diferente da padrão, 
+        a propriedade é usada para calcular larguras (widths) e alturas (heights) dos elementos*/
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial;
+        margin: 0px;
+    }
+    .cabecalho{
+        background-color: yellow;
+        color: blue;
+        border: 1px solid blue;
+        text-align: center;
+        padding: 20px;
+        font-size: 40px;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .menu a{
+        text-decoration: none;
+        padding: 3px;
+        color: blue;
+    }
+    .menu a:hover{
+        color: gray;
+    }
+    .corpo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .conteudo1, .conteudo2, .conteudo3{
+        width: 100%;
+        height: 400px;
+    }
+    .conteudo1 img{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .conteudo2 h3{
+        text-align: center;
+    }
+    .conteudo2 p{
+        overflow: auto;
+    }
+    .noticia a{
+        text-decoration: none;
+        color: black;
+    }
+    .noticia a:hover{
+        color: blue;
+    }
+    .conteudo3{
+        border: 1px dotted red;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    .rodape{
+        text-align: center;
+    }
+    .rodape p{
+        text-shadow: -2px -2px 5px red, 2px 2px 5px blue;
+    }
+    
+    @media only screen and (min-width: 800px){
+        .menu, .corpo{
+            flex-direction: row;
+        }
+        .conteudo1{
+            width: 40%;
+        }
+        .conteudo2{
+            width: 60%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="cabecalho" id="inicio">
+        <h1>Timothy Corporation</h1>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#bastidores">Bastidores</a></li>
+            <li><a href="#rodape">Contato</a></li>
+        </ul>
+    </div>
+    <div class="corpo">
+        <div class="conteudo1">
+            <picture>
+                <source srcset="imagem1.jpg" media="(min-width: 800px)">
+                <img src="imagem2.jpg">
+            </picture>
+        </div>
+        <div class="conteudo2" id="noticias">
+            <h3>Notícias</h3>
+            <h2 class="noticia"><a href="https://www.hipsters.tech/gamedev-e-crowdfunding-a-lenda-do-heroi-2-hipsters-ponto-tech-323/" target="_blank">Gamedev e crowdfunding: A Lenda do Heroi 2 - Hipsters Ponto Tech</a></h2>
+            <p>Mais um episódio do Hipsters.Tech sobre GameDev. 🎮✨ <br> Desta vez, convidamos as pessoas por trás de um dos games brasileiro mais amados e aclamados dos últimos tempos, a Lenda do Herói, que está lançando a sua parte 2. <br>Isso mesmo! Vamos conversar com Castro Brothers e a Dumativa, criadores do projeto. ⚔🛡</p>
+            <h2 class="noticia"><a href="https://www.hipsters.tech/pc-gamer-hipsters-ponto-tech-320/" target="_blank">PC Gamer - Hipsters Ponto Tech #320</a></h2>
+            <p>Esse episódio é especial para você que tem pc gamer e/ou está montando o seu setup especial. 💻🔨 Vamos descobrir quais são as principais configurações para ter um pc gamer de alta performance e o que é importante prestar atenção na hora de montar o seu pc. </p>
+        </div>
+        <div class="conteudo3" id="bastidores">
+            <h2>Bastidores</h2>
+            <!--Fiz uma versão com captura de tela e incorporei usando iframe, porém logo depois tem a versão solicitada pela atividade-->
+            <!--<iframe src="https://www.loom.com/embed/b568fb7b9d57458aa27a2169ada6ad36" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen width="500px" height="300px"></iframe>-->
+            <video width="500px" height="300px" controls muted><source src="video.webm" type="video/webm"></video>
+        </div>   
+    </div>
+    <div class="rodape" id="rodape">
+        <p>Telefone +551312345-5678</p>
+        <p>Endereço R. dos Programadores</p>
+    </div>
+</body>
+</html>
